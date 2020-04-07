@@ -1,0 +1,41 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" 
+	xmlns:st="jelly:stapler" xmlns:d="jelly:define" 
+	xmlns:l="/lib/layout" xmlns:t="/lib/hudson" 
+	xmlns:f="/lib/form" xmlns:c="/lib/credentials">
+
+	<f:entry title="${%RepoName}" field="repoName">
+		<f:textbox field="repoName" />
+	</f:entry>
+
+	<f:entry title="${%WorkspaceName}" field="workspaceName">
+		<f:textbox field="workspaceName" />
+	</f:entry>
+	
+	<f:entry title="${%ConsumerClientId}" field="comsumerClientId">
+		<f:textbox field="comsumerClientId" />
+	</f:entry>
+
+	<f:entry title="${%ConsumerClientPassword}" field="comsumerClientPassword">
+		<f:password field="comsumerClientPassword" />
+	</f:entry>
+
+	<f:entry title="${%AppUsername}" field="appUsername">
+		<f:textbox field="appUsername" />
+	</f:entry>
+
+	<f:entry title="${%AppPassword}" field="appPassword">
+		<f:password field="appPassword" />
+	</f:entry>
+
+	<f:entry title="${%CopyFrom}" field="copyFromBranch">
+		<f:textbox field="copyFromBranch" />
+	</f:entry>
+	<f:entry title="${%Branch}" field="destinationBranches">
+		<f:repeatableProperty field="destinationBranches"  minimum="0" />  
+   		<f:description>
+    		Set destination branches
+   		</f:description>
+    </f:entry>
+	
+</j:jelly>
